@@ -1,0 +1,219 @@
+{
+	"info": {
+		"_postman_id": "07e22bca-b45d-4f4d-817e-6daca7ebfe0a",
+		"name": "Nest JS Keycloak",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "1069503"
+	},
+	"item": [
+		{
+			"name": "Index",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "User",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "View Album",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Admin",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "All",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Create Album",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJlcUtLcThvNFY1VTZqMUl4dU01ZlJBYUhJUEh0bHF6WThoQktJbFZPaXQwIn0.eyJleHAiOjE2NTk0NjQ3NzMsImlhdCI6MTY1OTQ2NDQ3MywianRpIjoiOTM2NjI1M2MtZTIyNy00ZWJiLWI1NGQtYzJhYzU2ZWQ3NGY4IiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDoyODA4MC9hdXRoL3JlYWxtcy9waG90b3oiLCJhdWQiOiJhY2NvdW50Iiwic3ViIjoiOTZlODIzOWMtYWE4Yi00OGVlLTgyZDgtODcyMjNjOWE3ZjIxIiwidHlwIjoiQmVhcmVyIiwiYXpwIjoicmVzdC1hcGkiLCJzZXNzaW9uX3N0YXRlIjoiNWJkY2RmNTctZGQzMC00OTgzLThlNTQtNmE4OWJlNWE2M2ViIiwiYWNyIjoiMSIsInJlYWxtX2FjY2VzcyI6eyJyb2xlcyI6WyJvZmZsaW5lX2FjY2VzcyIsImRlZmF1bHQtcm9sZXMtcGhvdG96IiwidW1hX2F1dGhvcml6YXRpb24iLCJ1c2VyIl19LCJyZXNvdXJjZV9hY2Nlc3MiOnsiYWNjb3VudCI6eyJyb2xlcyI6WyJtYW5hZ2UtYWNjb3VudCIsIm1hbmFnZS1hY2NvdW50LWxpbmtzIiwidmlldy1wcm9maWxlIl19fSwic2NvcGUiOiJlbWFpbCBwcm9maWxlIiwic2lkIjoiNWJkY2RmNTctZGQzMC00OTgzLThlNTQtNmE4OWJlNWE2M2ViIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsInByZWZlcnJlZF91c2VybmFtZSI6InVzZXIxIiwiZW1haWwiOiJ1c2VyMUBtZXZyaXMuYXBwIn0.VeU-9S31kq0aQg8dTvxS020Z4FtaqNavbuF9JjTp_0dpCNWvY9C_QftLjdIgwXnBxYK9p2wK3JGQC3jTWC1NACbjpKro0Se6ZgvAdl1wgFKJP2KsYLp5hSrtGUQVuj4u8B6SJCk10JMBknRS7lD3cZ1rrBdKzWabT6Xh_ThORFbhRz6jWhefkVMW35ry2xD1v8x8TqGRSxZQjgBDvvIjz0RZn_eWU-_bP0-TEJ7hqipPzg8SItfjH71NX7yx2vh_PPwlfangS9_87HHSgsauD0n1u9YuUHzIbErVFDiWeYdSJAJFi3bc8Qtc_d774p1554SYmVnFsTDzd6sFvmFi7w",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": \"123\",\n    \"name\": \"album 123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/album",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"album"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User1 Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "user1",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123",
+							"type": "text"
+						},
+						{
+							"key": "client_id",
+							"value": "nest-app",
+							"type": "text"
+						},
+						{
+							"key": "client_secret",
+							"value": "a449607e-18d8-4e79-b809-e7c6d42f225b",
+							"type": "text"
+						},
+						{
+							"key": "grant_type",
+							"value": "password",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:28080/auth/realms/nestjs-example/protocol/openid-connect/token",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "28080",
+					"path": [
+						"auth",
+						"realms",
+						"nestjs-example",
+						"protocol",
+						"openid-connect",
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Check Permission",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJlcUtLcThvNFY1VTZqMUl4dU01ZlJBYUhJUEh0bHF6WThoQktJbFZPaXQwIn0.eyJleHAiOjE2NTk1MDEyODgsImlhdCI6MTY1OTQ2NTI4OCwianRpIjoiN2MxYWMxYmItMTM4MS00MzNjLWExMWMtODdiYzg1NzdiMmQ1IiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDoyODA4MC9hdXRoL3JlYWxtcy9waG90b3oiLCJhdWQiOiJhY2NvdW50Iiwic3ViIjoiOTZlODIzOWMtYWE4Yi00OGVlLTgyZDgtODcyMjNjOWE3ZjIxIiwidHlwIjoiQmVhcmVyIiwiYXpwIjoicmVzdC1hcGkiLCJzZXNzaW9uX3N0YXRlIjoiMzY4ODNhM2EtZDJlYy00N2VlLTliOWQtMWFkOTIyZjhlNDY1IiwiYWNyIjoiMSIsInJlYWxtX2FjY2VzcyI6eyJyb2xlcyI6WyJvZmZsaW5lX2FjY2VzcyIsImRlZmF1bHQtcm9sZXMtcGhvdG96IiwidW1hX2F1dGhvcml6YXRpb24iLCJ1c2VyIl19LCJyZXNvdXJjZV9hY2Nlc3MiOnsicmVzdC1hcGkiOnsicm9sZXMiOlsidXNlciJdfSwiYWNjb3VudCI6eyJyb2xlcyI6WyJtYW5hZ2UtYWNjb3VudCIsIm1hbmFnZS1hY2NvdW50LWxpbmtzIiwidmlldy1wcm9maWxlIl19fSwic2NvcGUiOiJlbWFpbCBwcm9maWxlIiwic2lkIjoiMzY4ODNhM2EtZDJlYy00N2VlLTliOWQtMWFkOTIyZjhlNDY1IiwiZW1haWxfdmVyaWZpZWQiOnRydWUsInByZWZlcnJlZF91c2VybmFtZSI6InVzZXIxIiwiZW1haWwiOiJ1c2VyMUBtZXZyaXMuYXBwIn0.a4bMEfpzgcuX_EKmsTDgqduUTDI93BsjwVuivrmLKvz0uQkWblMhdynAgSJKNa70dXrKK0UipbEX32aaGUyXliZL9wuIK4nL5cPYxJ5zv4scQZETNNwDVb8jI5LUwCVsz8dLyarHgdPbUgQQI7q1eqj7aXq-YH9hC3UVCt0-Q2CJ2hihAS4HsPCGCo41FD_u-H7ua8_LCZznkt2i8-MaE5rp97Pp9ImWaPpMVlqAGXvzwiNbFPnd5cPEOa0JN9hmsE5yYZRE_ZzRU3OKsW90OX84FES3yJDMjAZJ-6kvPxpu8bUUuG34S0S6iJ1EPHE0UNinnoAag4H_3Pe3Qv-1Rg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "grant_type",
+						"value": "urn:ietf:params:oauth:grant-type:uma-ticke",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "audience",
+						"value": "rest-api",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "permission",
+						"value": "123#album:view",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "grant_type",
+							"value": "urn:ietf:params:oauth:grant-type:uma-ticket",
+							"type": "text"
+						},
+						{
+							"key": "permission",
+							"value": "123#album:view",
+							"type": "text"
+						},
+						{
+							"key": "response_mode",
+							"value": "decision",
+							"type": "text"
+						},
+						{
+							"key": "audience",
+							"value": "rest-api",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:28080/auth/realms/photoz/protocol/openid-connect/token",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "28080",
+					"path": [
+						"auth",
+						"realms",
+						"photoz",
+						"protocol",
+						"openid-connect",
+						"token"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

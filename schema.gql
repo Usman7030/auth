@@ -1,0 +1,17 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type Album {
+  id: String!
+  name: String!
+}
+
+input AlbumInput {
+  id: String!
+  name: String!
+}
+
+type Query {
+  album(id: String!): Album!
+}

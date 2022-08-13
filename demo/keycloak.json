@@ -1,0 +1,38 @@
+{
+  "realm": "photoz",
+  "auth-server-url": "http://localhost:28080/auth/",
+  "clientId": "rest-api",
+	"secret": "JARCOmEw0yOasPSRAhTjLZV02P4WpyG4",
+	"policy-enforcer": {
+    "enforcement-mode": "PERMISSIVE",
+    "user-managed-access": {},
+    "paths": [
+      {
+        "name" : "Album Resource",
+        "path" : "/album/{id}",
+        "methods" : [
+          {
+            "method": "DELETE",
+            "scopes" : ["album:delete"]
+          },
+          {
+            "method": "GET",
+            "scopes" : ["album:view"]
+          }
+        ]
+      },
+      {
+        "name" : "Album Resource",
+        "path" : "/album/shares",
+        "enforcement-mode": "DISABLED"
+      },
+      {
+        "path" : "/profile"
+      },
+      {
+        "name" : "Admin Resources",
+        "path" : "/admin/*"
+      }
+    ]
+  }
+}
